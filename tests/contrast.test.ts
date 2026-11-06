@@ -40,6 +40,7 @@ const PAIRS: [string, string][] = [
   ["st-perish", "st-perish-bg"], ["st-hold", "st-hold-bg"], ["st-exception", "st-exception-bg"],
   ["st-stockout", "surface"], ["st-demand", "surface"], ["st-overstock", "surface"], ["st-perish", "surface"], ["st-hold", "surface"], ["st-exception", "surface"],
   ["text", "st-stockout-bg"], ["text", "st-demand-bg"],
+  ["side-text", "side-bg"], ["side-muted", "side-bg"], ["side-text", "side-active"], ["side-muted", "side-hover"],
 ];
 
 describe("colour contrast, WCAG AA", () => {

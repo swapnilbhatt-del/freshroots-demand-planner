@@ -16,21 +16,7 @@ code, .mono, .num { font-family: var(--font-mono); font-variant-numeric: tabular
 .muted { color: var(--text-muted); }
 .faint { color: var(--text-faint); }
 
-/* shell */
-.shell-top {
-  position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: var(--s-5);
-  padding: 0 var(--s-5); height: 52px; background: var(--surface); border-bottom: 1px solid var(--border);
-}
-.brand { font-family: var(--font-head); font-weight: 700; font-size: 17px; display: flex; align-items: center; gap: var(--s-2); color: var(--text); text-decoration: none; }
-.brand svg { color: var(--accent); }
-.nav { display: flex; gap: var(--s-1); height: 100%; }
-.nav a {
-  display: flex; align-items: center; padding: 0 var(--s-3); color: var(--text-muted); text-decoration: none;
-  font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -1px;
-}
-.nav a:hover { color: var(--text); }
-.nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--accent); }
-.shell-spacer { flex: 1; }
+/* shell: layout lives in visual.css */
 .page { padding: var(--s-5); max-width: 1480px; margin: 0 auto; }
 .page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-4); margin-bottom: var(--s-4); flex-wrap: wrap; }
 .page-head p { color: var(--text-muted); margin-top: var(--s-1); max-width: 70ch; }
@@ -124,14 +110,7 @@ table.data td.num { font-family: var(--font-mono); font-variant-numeric: tabular
 
 .view-banner { margin: var(--s-3) var(--s-5) 0; }
 
-/* Small screens: the brand and controls sit on one row and the page links get their own row that scrolls sideways on
-   its own, so the page itself never does. */
-@media (max-width: 900px) {
-  .shell-top { flex-wrap: wrap; height: auto; padding: var(--s-2) var(--s-3); gap: var(--s-2) var(--s-3); }
-  .shell-top .nav { order: 3; flex: 0 0 100%; height: 40px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
-  .shell-top .nav a { flex: 0 0 auto; white-space: nowrap; }
-  .settings-side { position: static; }
-}
+@media (max-width: 900px) { .settings-side { position: static; } }
 @media (max-width: 560px) {
   .user-chip { display: none; }
   .stop-form { width: min(340px, calc(100vw - 2 * var(--s-3))); }
